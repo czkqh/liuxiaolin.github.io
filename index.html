@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="个人主页，展示简介、项目、经历和联系方式。">
+    <title>你的名字 | 个人主页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">你的名字</a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#experience">经历</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/hero-workspace.png" alt="一张现代工作桌面照片，包含电脑、笔记本和自然光">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Personal Homepage</p>
+          <h1 id="hero-title">你好，我是你的名字。</h1>
+          <p class="hero-copy">
+            我关注软件开发、产品设计和长期可维护的工程实践。这里整理我的项目、经历、文章和联系方式。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="#projects">查看项目</a>
+            <a class="button secondary" href="mailto:yourname@example.com">发邮件</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>关于我</h2>
+        </div>
+        <div class="about-grid">
+          <p>
+            这里写一段 2 到 4 句话的自我介绍。可以包括你现在的身份、主要方向、擅长的技术栈，以及你希望别人通过这个主页快速了解什么。
+          </p>
+          <div class="facts" aria-label="个人信息摘要">
+            <span>所在地：城市 / 国家</span>
+            <span>方向：前端 / 后端 / AI / 设计</span>
+            <span>状态：开放合作 / 求职 / 学习中</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>精选项目</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div>
+              <p class="project-meta">Web App</p>
+              <h3>项目名称一</h3>
+              <p>用一句话说明这个项目解决的问题，再补充你负责的部分、技术栈和结果。</p>
+            </div>
+            <a href="#" aria-label="查看项目名称一">查看</a>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="project-meta">Open Source</p>
+              <h3>项目名称二</h3>
+              <p>可以放 GitHub 仓库、课程项目、研究 Demo，或者你正在持续维护的小工具。</p>
+            </div>
+            <a href="#" aria-label="查看项目名称二">查看</a>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="project-meta">Writing</p>
+              <h3>文章 / 笔记</h3>
+              <p>如果你有博客、论文笔记或技术总结，这里可以作为入口，让访客继续了解你的思考方式。</p>
+            </div>
+            <a href="#" aria-label="查看文章或笔记">查看</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>经历</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>2026</span>
+            <div>
+              <h3>当前身份 / 公司 / 学校</h3>
+              <p>写你最近的一段经历，突出职责、产出和可量化结果。</p>
+            </div>
+          </article>
+          <article>
+            <span>2025</span>
+            <div>
+              <h3>上一段重要经历</h3>
+              <p>可以是实习、比赛、课程项目、研究助理、自由职业或开源贡献。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>保持联系</h2>
+          <p>把下面的链接换成你的真实邮箱、GitHub、LinkedIn、博客或社交账号。</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:yourname@example.com">Email</a>
+          <a href="https://github.com/yourname">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourname">LinkedIn</a>
+          <a href="#">Blog</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 你的名字</span>
+      <a href="#top">回到顶部</a>
+    </footer>
+  </body>
+</html>
