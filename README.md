@@ -23,7 +23,8 @@ Main files:
 - `index.html`: profile, biography, research interests, publications, education, awards
 - `styles.css`: layout and responsive styling
 - `personal.jpg`: profile photo
-- `assets/qdu.svg`, `assets/sdu.svg`, `assets/ustc.svg`: school icons
+- `qdu.jpg`, `sdu.png`, `ustc.png`: school logos
+- `haier.jpg`, `SII.webp`: internship organization logos
 
 Publication metadata was filled from the public ORCID record:
 
