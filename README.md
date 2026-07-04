@@ -1,6 +1,6 @@
 # Xiaolin Liu Academic Homepage
 
-Static academic homepage for Xiaolin Liu, an Artificial Intelligence Ph.D. student at the University of Science and Technology of China.
+Static academic homepage for Xiaolin Liu, a Ph.D. student in Intelligence Science and Technology at the University of Science and Technology of China.
 
 ## Preview
 
