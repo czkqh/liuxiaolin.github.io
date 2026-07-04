@@ -24,6 +24,7 @@ Main files:
 - `styles.css`: layout and responsive styling
 - `personal.jpg`: profile photo
 - `qdu.jpg`, `sdu.png`, `ustc.png`: school logos
+- `zgca.webp`: Beijing Zhongguancun Academy logo
 - `haier.jpg`, `SII.webp`: internship organization logos
 
 Publication metadata was filled from the public ORCID record:

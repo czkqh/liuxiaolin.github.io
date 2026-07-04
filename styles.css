@@ -114,7 +114,7 @@ a:hover {
   top: 0;
   z-index: 2;
   display: flex;
-  gap: 18px;
+  gap: 14px;
   padding: 8px 0 18px;
   background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--line);
@@ -123,7 +123,7 @@ a:hover {
 
 .topbar a {
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   font-weight: 650;
   white-space: nowrap;
 }
@@ -239,6 +239,58 @@ h3 {
   font-size: 0.95rem;
 }
 
+.highlight-publication {
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.publication + .highlight-publication,
+.highlight-publication + .publication {
+  margin-top: 16px;
+}
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.paper-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #b7cee8;
+  border-radius: 5px;
+  background: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.patent-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.patent-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
 .timeline {
   display: grid;
   gap: 16px;
@@ -251,16 +303,32 @@ h3 {
 }
 
 .logo-list article {
-  grid-template-columns: 56px 160px minmax(0, 1fr);
+  grid-template-columns: 68px 160px minmax(0, 1fr);
   align-items: start;
 }
 
+.logo-frame {
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .org-logo {
-  width: 48px;
-  height: 48px;
-  margin-top: 2px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   border-radius: 6px;
+}
+
+.logo-sdu {
+  width: 62px;
+  height: 62px;
+}
+
+.logo-haier {
+  width: 58px;
 }
 
 .timeline p {
@@ -339,7 +407,7 @@ h3 {
 
   .topbar {
     overflow-x: auto;
-    gap: 18px;
+    gap: 16px;
   }
 }
 
@@ -364,7 +432,7 @@ h3 {
     gap: 4px;
   }
 
-  .org-logo {
+  .logo-frame {
     margin-bottom: 6px;
   }
 
