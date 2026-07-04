@@ -1,12 +1,16 @@
 :root {
   --bg: #ffffff;
   --panel: #f7f8fa;
+  --panel-strong: #f2f5f9;
   --text: #1f2933;
   --muted: #667085;
   --line: #d9dee7;
+  --line-soft: #e8edf3;
   --link: #2b6cb0;
   --link-hover: #174a7c;
   --accent: #eef5ff;
+  --accent-strong: #dbeafe;
+  --shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
 }
 
 * {
@@ -19,7 +23,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, #f8fafc 0, #ffffff 260px),
+    var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans SC", sans-serif;
   font-size: 16px;
@@ -38,22 +44,27 @@ a:hover {
 }
 
 .page-shell {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 56px;
-  padding: 44px 0 56px;
+  grid-template-columns: 292px minmax(0, 1fr);
+  gap: 52px;
+  padding: 38px 0 60px;
 }
 
 .profile-card {
   position: sticky;
-  top: 32px;
+  top: 28px;
   align-self: start;
   width: 100%;
   min-width: 0;
-  padding: 0 0 28px;
+  padding: 24px 22px 26px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
 }
 
 .content {
@@ -64,9 +75,10 @@ a:hover {
   width: 220px;
   height: 220px;
   display: block;
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
   border-radius: 50%;
-  border: 1px solid var(--line);
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 24px rgba(31, 41, 51, 0.16);
   object-fit: cover;
   object-position: 58% 42%;
 }
@@ -88,6 +100,7 @@ a:hover {
   margin: 12px 0 4px;
   color: var(--text);
   font-weight: 600;
+  line-height: 1.45;
 }
 
 .affiliation {
@@ -97,40 +110,63 @@ a:hover {
 
 .profile-links {
   display: grid;
-  gap: 8px;
+  gap: 9px;
   max-width: 100%;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .profile-links a {
   display: block;
-  padding: 7px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 8px 10px;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 7px;
   font-weight: 600;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.profile-links a:hover {
+  background: var(--accent);
+  border-color: #c6d9f1;
+  text-decoration: none;
 }
 
 .topbar {
   position: sticky;
-  top: 0;
+  top: 12px;
   z-index: 2;
   display: flex;
-  gap: 14px;
-  padding: 8px 0 18px;
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
+  gap: 6px;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(31, 41, 51, 0.07);
+  backdrop-filter: blur(16px);
 }
 
 .topbar a {
   color: var(--muted);
-  font-size: 0.9rem;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 0.88rem;
   font-weight: 650;
+  line-height: 1.2;
   white-space: nowrap;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.topbar a:hover {
+  background: var(--accent);
+  color: var(--link-hover);
+  text-decoration: none;
 }
 
 .section {
-  padding: 34px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line-soft);
 }
 
 .section:first-of-type {
@@ -147,7 +183,7 @@ a:hover {
 }
 
 h2 {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   font-size: 1.65rem;
   line-height: 1.25;
   letter-spacing: 0;
@@ -193,7 +229,7 @@ h3 {
   min-height: 34px;
   padding: 0 12px;
   background: var(--accent);
-  border: 1px solid #cfe1f7;
+  border: 1px solid var(--accent-strong);
   border-radius: 6px;
   color: #234b73;
   font-weight: 650;
@@ -201,7 +237,7 @@ h3 {
 
 .news-list {
   display: grid;
-  gap: 10px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -211,6 +247,11 @@ h3 {
   display: grid;
   grid-template-columns: 96px minmax(0, 1fr);
   gap: 16px;
+  align-items: start;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
 }
 
 .news-list time,
@@ -221,11 +262,11 @@ h3 {
 }
 
 .publication {
-  padding: 18px 0;
+  padding: 20px 0;
 }
 
 .publication + .publication {
-  border-top: 1px dashed var(--line);
+  border-top: 1px solid var(--line-soft);
 }
 
 .authors,
@@ -240,9 +281,9 @@ h3 {
 }
 
 .highlight-publication {
-  padding: 18px;
-  background: var(--panel);
-  border: 1px solid var(--line);
+  padding: 20px;
+  background: var(--panel-strong);
+  border: 1px solid var(--line-soft);
   border-radius: 8px;
 }
 
@@ -268,6 +309,13 @@ h3 {
   background: #ffffff;
   font-size: 0.92rem;
   font-weight: 650;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.paper-links a:hover {
+  background: var(--accent);
+  border-color: #98b9dd;
+  text-decoration: none;
 }
 
 .patent-list {
@@ -293,13 +341,17 @@ h3 {
 
 .timeline {
   display: grid;
-  gap: 16px;
+  gap: 10px;
 }
 
 .timeline article {
   display: grid;
   grid-template-columns: 140px minmax(0, 1fr);
   gap: 20px;
+  padding: 14px 12px;
+  background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
 }
 
 .logo-list article {
@@ -313,6 +365,9 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
 }
 
 .org-logo {
@@ -341,7 +396,7 @@ h3 {
 
 .award-list {
   display: grid;
-  gap: 10px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -351,6 +406,10 @@ h3 {
   display: grid;
   grid-template-columns: 96px minmax(0, 1fr);
   gap: 16px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
 }
 
 .award-list time {
@@ -387,6 +446,7 @@ h3 {
     position: static;
     display: grid;
     justify-items: center;
+    padding: 22px 18px 24px;
   }
 
   .portrait {
@@ -401,13 +461,12 @@ h3 {
   }
 
   .profile-links a {
-    border-bottom: 0;
     font-size: 0.95rem;
   }
 
   .topbar {
     overflow-x: auto;
-    gap: 16px;
+    top: 8px;
   }
 }
 
@@ -422,6 +481,19 @@ h3 {
 
   .profile-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 6px;
+  }
+
+  .topbar a {
+    flex: 1 1 calc(33.333% - 6px);
+    padding: 7px 5px;
+    text-align: center;
+    font-size: 0.82rem;
   }
 
   .news-list li,
