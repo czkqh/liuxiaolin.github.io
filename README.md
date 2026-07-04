@@ -1,45 +1,53 @@
-# AI 博士生个人主页
+# Xiaolin Liu Academic Homepage
 
-这是一个可以直接部署到 GitHub Pages 的静态学术个人主页，适合人工智能方向博士生展示个人简介、研究方向、论文、项目和经历。
+Static academic homepage for Xiaolin Liu, an Artificial Intelligence Ph.D. student at the University of Science and Technology of China.
 
-## 本地预览
+## Preview
 
-直接双击 `index.html`，或运行本地静态服务器预览：
+Run a local static server:
 
 ```bash
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-然后打开 `http://127.0.0.1:8000/`。
+Then open:
 
-## 修改内容
+```text
+http://127.0.0.1:8000/
+```
 
-优先替换 `index.html` 里的这些位置：
+## Content
 
-- `Your Name`
-- `Your Lab / University`
-- `mailto:yourname@example.com`
-- `https://github.com/yourname`
-- `Google Scholar`、`CV` 链接
-- About、News、Selected Publications、Projects、Education & Experience 里的占位内容
+Main files:
 
-头像使用项目根目录的 `personal.jpg`。
+- `index.html`: profile, biography, research interests, publications, education, awards
+- `styles.css`: layout and responsive styling
+- `personal.jpg`: profile photo
+- `assets/qdu.svg`, `assets/sdu.svg`, `assets/ustc.svg`: school icons
 
-## 发布到 username.github.io
+Publication metadata was filled from the public ORCID record:
 
-1. 在 GitHub 新建一个仓库，名字必须是 `你的GitHub用户名.github.io`。
-2. 把本目录里的文件提交并推送到那个仓库。
-3. 打开 `https://你的GitHub用户名.github.io`，通常几分钟内就能看到页面。
+```text
+https://orcid.org/0009-0004-5440-5908
+```
 
-常用命令：
+## Deploy To GitHub Pages
+
+Create a GitHub repository named:
+
+```text
+czkqh.github.io
+```
+
+Then push this repository:
 
 ```bash
-git init
-git add .
-git commit -m "Create personal homepage"
-git branch -M main
-git remote add origin https://github.com/你的GitHub用户名/你的GitHub用户名.github.io.git
+git remote add origin https://github.com/czkqh/czkqh.github.io.git
 git push -u origin main
 ```
 
-如果你用的是普通仓库名，也可以在仓库的 Settings -> Pages 里选择从 `main` 分支部署。
+The site will be available at:
+
+```text
+https://czkqh.github.io
+```

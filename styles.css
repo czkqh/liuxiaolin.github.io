@@ -29,6 +29,7 @@ body {
 a {
   color: var(--link);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 a:hover {
@@ -69,6 +70,12 @@ a:hover {
   font-size: 2rem;
   line-height: 1.15;
   letter-spacing: 0;
+}
+
+.chinese-name {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .role {
@@ -152,6 +159,13 @@ h3 {
 
 p {
   margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
 }
 
 .section p:last-child,
@@ -207,40 +221,14 @@ p {
 }
 
 .authors,
-.venue {
+.venue,
+.doi {
   margin-bottom: 4px;
 }
 
-.paper-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.paper-links a {
-  padding: 2px 8px;
-  border: 1px solid #b7cee8;
-  border-radius: 5px;
-  background: #fbfdff;
-  font-size: 0.92rem;
-  font-weight: 650;
-}
-
-.project-list {
-  display: grid;
-  gap: 18px;
-}
-
-.project-list article {
-  padding: 18px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-
-.project-list p {
+.doi {
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .timeline {
@@ -254,13 +242,50 @@ p {
   gap: 20px;
 }
 
-.timeline p,
-.contact p {
+.education-list article {
+  grid-template-columns: 48px 140px minmax(0, 1fr);
+  align-items: start;
+}
+
+.school-icon {
+  width: 42px;
+  height: 42px;
+  margin-top: 2px;
+}
+
+.timeline p {
   color: var(--muted);
 }
 
-.email {
-  font-weight: 700;
+.timeline p + p {
+  margin-top: -8px;
+}
+
+.award-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.award-list li {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.award-list time {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.award-list span {
+  font-weight: 650;
+}
+
+.empty-section {
+  min-height: 96px;
 }
 
 .footer {
@@ -322,9 +347,15 @@ p {
   }
 
   .news-list li,
-  .timeline article {
+  .timeline article,
+  .education-list article,
+  .award-list li {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .school-icon {
+    margin-bottom: 6px;
   }
 
   .footer {
