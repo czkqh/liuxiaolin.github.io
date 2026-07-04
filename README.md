@@ -1,20 +1,29 @@
-# 个人主页
+# AI 博士生个人主页
 
-这是一个可以直接部署到 GitHub Pages 的静态个人主页。
+这是一个可以直接部署到 GitHub Pages 的静态学术个人主页，适合人工智能方向博士生展示个人简介、研究方向、论文、项目和经历。
 
 ## 本地预览
 
-直接双击 `index.html`，或在浏览器里打开这个文件即可预览。
+直接双击 `index.html`，或运行本地静态服务器预览：
+
+```bash
+python -m http.server 8000 --bind 127.0.0.1
+```
+
+然后打开 `http://127.0.0.1:8000/`。
 
 ## 修改内容
 
-优先替换这些位置：
+优先替换 `index.html` 里的这些位置：
 
-- `index.html` 里的 `你的名字`
+- `Your Name`
+- `Your Lab / University`
 - `mailto:yourname@example.com`
 - `https://github.com/yourname`
-- `https://www.linkedin.com/in/yourname`
-- “关于我”“精选项目”“经历”里的占位文案
+- `Google Scholar`、`CV` 链接
+- About、News、Selected Publications、Projects、Education & Experience 里的占位内容
+
+头像使用项目根目录的 `personal.jpg`。
 
 ## 发布到 username.github.io
 
